@@ -93,6 +93,10 @@ namespace AlgorithmsDataStructures
                 {
                     if (node == head)
                     {
+                        if (node == tail)
+                        {
+                            tail = null;
+                        }
                         head = node.next;
                         node = node.next;
                         continue;
@@ -142,6 +146,10 @@ namespace AlgorithmsDataStructures
             {
                 _nodeToInsert.next = head;
                 head = _nodeToInsert;
+                if (tail == null)
+                {
+                    tail = _nodeToInsert;
+                }
                 return;
             }
 
