@@ -151,6 +151,10 @@ namespace AlgorithmsDataStructures
                 if (node == _nodeAfter)
                 {
                     _nodeToInsert.next = node.next;
+                    if (node == tail)
+                    {
+                        tail = _nodeToInsert;
+                    }
                     node.next = _nodeToInsert;
                     return;
                 }
